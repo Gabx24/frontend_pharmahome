@@ -10,6 +10,7 @@ const data = {
       brand: "The ordinary",
       rating: 4.5,
       numReviews: 10,
+      Supplier: "CompanyX"
       description:
         "Our Niancimide 10% + 1 % Zinc formula is a water- based serum that boosts skin brightness, improved skin smoothness and reinforces the skin barrier over time. ",
     },
@@ -23,6 +24,7 @@ const data = {
       brand: "Imodium",
       rating: 4,
       numReviews: 15,
+      Supplier: "CompanyX"
       description:
         "Loperamide is a medicine to treat diarrhoea. It can help with short-term diarrhoea or irritable bowel syndrome (IBS).",
     },
@@ -36,6 +38,7 @@ const data = {
       brand: "CERAVE",
       rating: 5,
       numReviews: 25,
+      Supplier: "CompanyX"
       description:
         "CeraVe Foaming Facial Cleanser features ceramides, hyaluronic acid, and niacinamide, and is formulated to help to maintain your skin's protective barrier.",
     },
@@ -49,6 +52,7 @@ const data = {
       brand: "Talcid",
       rating: 4,
       numReviews: 8,
+      Supplier: "CompanyX"
       description:
         "Talcid Tablet is used for relieving acidity and heartburn in conditions such as. It contains rabeprazole as its active medicine.",
     },
