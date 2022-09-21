@@ -17,7 +17,7 @@ function ControlledCarousel() {
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src="https://firebasestorage.googleapis.com/v0/b/pharmahome-2ffc7.appspot.com/o/p13.jpg?alt=media&token=7ce8df99-a540-4fa7-b4e8-c09c170d90ca"
+          src="https://firebasestorage.googleapis.com/v0/b/pharmahome-2ffc7.appspot.com/o/Ari%20Eye%20Drops.jpg?alt=media&token=d5357797-68f0-43f8-bfd4-78a844aba107"
           alt="First slide"
         />
         <Carousel.Caption></Carousel.Caption>
@@ -25,7 +25,7 @@ function ControlledCarousel() {
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src="https://firebasestorage.googleapis.com/v0/b/pharmahome-2ffc7.appspot.com/o/p21.jpg?alt=media&token=c7e9fb85-0a55-4939-bc28-ea017f5ed3f9"
+          src="https://firebasestorage.googleapis.com/v0/b/pharmahome-2ffc7.appspot.com/o/Ibuprofen%20400mg.jpg?alt=media&token=a79b24ca-4ecb-4a9d-b683-7ac847736f08"
           alt="Second slide"
         />
 
@@ -34,7 +34,7 @@ function ControlledCarousel() {
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src="https://firebasestorage.googleapis.com/v0/b/pharmahome-2ffc7.appspot.com/o/p19.jpg?alt=media&token=080f5b53-79cd-4b83-81eb-6118fd507ad1"
+          src="https://firebasestorage.googleapis.com/v0/b/pharmahome-2ffc7.appspot.com/o/Ottosan%20Nasal%20Spray.jpg?alt=media&token=7e179020-160a-4023-8f40-d7391c2cddb7"
           alt="Third slide"
         />
         <Carousel.Caption></Carousel.Caption>

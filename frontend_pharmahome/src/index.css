@@ -18,7 +18,7 @@ header a {
   text-decoration: none;
 }
 header img {
-  width: 15px;
+  width: 25px;
   height: auto;
   object-fit: contain;
 }
@@ -34,13 +34,17 @@ main {
   border: 1px #8ac9d6 solid;
   margin: 1rem;
 }
-.product img {
+.productImg {
   width: 100%;
   max-width: 400px;
+  height: 400px;
+  object-fit: cover;
+  margin: 0 auto;
 }
 .product-info {
   padding: 1rem;
 }
 h1 {
   color: #18a0fb;
+  margin-left: 5.5rem;
 }
