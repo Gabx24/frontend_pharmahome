@@ -11,18 +11,23 @@ import Home from "./Components/Home";
 import Cart from "./Components/Cart";
 import Dashboard from "./Components/Dashboard";
 import Profile from "./Components/Profile";
-import OrderHistory from "./Components/OrderHistory.js";
+import OrderHistory from "./Components/OrderHistory";
+import SignOut from "./Components/SignOut";
+import NavBarmenu from "./Components/Menu/NavBarmenu";
 
 function App() {
   return (
     <div>
       <Router basename="/">
+        {/* Add Menu Component */}
+        <NavBarmenu />
         <Routes>
           <Route exact path="/" component={Home} />
           <Route path="/Cart" component={Cart} />
           <Route path="/Dashboard" component={Dashboard} />
           <Route path="/Profile" component={Profile} />
           <Route path="/OrderHistory" component={OrderHistory} />
+          <Route path="/Signout" component={SignOut} />
         </Routes>
       </Router>
 
