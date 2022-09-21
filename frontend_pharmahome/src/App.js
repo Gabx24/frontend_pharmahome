@@ -1,5 +1,6 @@
 import data from "./data";
 import logo from "./logo.png";
+import Footer from "./Components/Footer";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
             </div>
           ))}
         </div>
+        <Footer/>
       </main>
     </div>
   );

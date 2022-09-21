@@ -1,0 +1,13 @@
+.text-white {
+    display: flex;
+    justify-content: center;
+}
+
+.text-center p-3{
+    background-color: #355764;
+
+}
+
+.Footer{
+    background-color: #355764;
+}
