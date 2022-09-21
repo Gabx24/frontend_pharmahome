@@ -1,17 +1,19 @@
+import { Link } from "react-router-dom";
+
 export default function FeatureProduct({ product }) {
   return (
     <div className="product" key={product.slug}>
-      <a href={/product/${product.slug}}>
+      <Link to={`/product/${product.slug}`}>
         <img
           className="productImg"
-          src={https://firebasestorage.googleapis.com/v0/b/pharmahome-2ffc7.appspot.com/o/${product.name}.jpg?alt=media}
+          src={`https://firebasestorage.googleapis.com/v0/b/pharmahome-2ffc7.appspot.com/o/${product.name}.jpg?alt=media`}
           alt={product.name}
         />
-      </a>
+      </Link>
       <div className="product-info">
-        <a href={/product/${product.slug}}>
+        <Link to={`/product/${product.slug}`}>
           <p>{product.name}</p>
-        </a>
+        </Link>
         <p>
           <strong>€{product.price}</strong>
         </p>
@@ -20,4 +22,3 @@ export default function FeatureProduct({ product }) {
     </div>
   );
 }
-  
