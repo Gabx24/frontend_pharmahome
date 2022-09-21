@@ -18,8 +18,8 @@ header a {
   text-decoration: none;
 }
 header img {
-  width: 30%;
-  height: 100%;
+  width: 15px;
+  height: auto;
   object-fit: contain;
 }
 main {

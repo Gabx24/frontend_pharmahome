@@ -1,14 +1,16 @@
 import data from "./data";
-import logo from "./logo.png";
 import Footer from "./Components/Footer";
+import FeatureProduct from "./Components/FeatureProduct";
+import ControlledCarousel from "./Components/Carousel";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
   return (
     <div>
-      <header>
+      {/* <header>
         <img src={logo} className="logo-header" alt="logo" />
         <a href="/">PharmaHome</a>
-      </header>
+      </header> */}
       <main>
         <h1>Featured Products</h1>
         <div className="products">
