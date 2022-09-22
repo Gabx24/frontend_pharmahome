@@ -84,7 +84,7 @@ const NavBarmenu = () => {
                     to={`Cart`}
                   >
                     {" "}
-                    About{" "}
+                    Cart{" "}
                   </NavLink>{" "}
                 </li>
                 <li
