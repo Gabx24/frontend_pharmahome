@@ -27,7 +27,7 @@ function App() {
         <Route path="/Home" element={<Home />} />
         <Route path="/" element={<Navigate replace to="/Home" />} />
         <Route path="/Cart" element={<Cart />} />
-        <Route path="/ProductPage" element={<ProductPage />} />
+        <Route path="/product/:slug" element={<ProductPage />} />
         <Route path="/Dashboard" element={<Dashboard />} />
         <Route path="/Profile" element={<Profile />} />
         <Route path="/OrderHistory" element={<OrderHistory />} />
