@@ -11,6 +11,7 @@ import Profile from "./Components/Profile";
 import OrderHistory from "./Components/OrderHistory";
 import SignOut from "./Components/SignOut";
 import NavBarmenu from "./Components/Menu/NavBarmenu";
+import { Navigate } from "react-router-dom";
 
 function App() {
   return (
@@ -18,7 +19,8 @@ function App() {
       {/* Add Menu Component */}
       <NavBarmenu />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/Home" element={<Home />} />
+        <Route path="/" element={<Navigate replace to="/Home" />} />
         <Route path="/Cart" element={<Cart />} />
         <Route path="/Dashboard" element={<Dashboard />} />
         <Route path="/Profile" element={<Profile />} />
