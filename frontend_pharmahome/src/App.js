@@ -12,6 +12,10 @@ import OrderHistory from "./Components/OrderHistory";
 import SignOut from "./Components/SignOut";
 import NavBarmenu from "./Components/Menu/NavBarmenu";
 import { Navigate } from "react-router-dom";
+import ProductPage from "./Components/ProductPage";
+import SignIn from "./Components/SignIn";
+import SignUp from "./Components/SignUp";
+import Checkout from "./Components/Checkout";
 
 function App() {
   return (
@@ -22,10 +26,14 @@ function App() {
         <Route path="/Home" element={<Home />} />
         <Route path="/" element={<Navigate replace to="/Home" />} />
         <Route path="/Cart" element={<Cart />} />
+        <Route path="/ProductPage" element={<ProductPage />} />
         <Route path="/Dashboard" element={<Dashboard />} />
         <Route path="/Profile" element={<Profile />} />
         <Route path="/OrderHistory" element={<OrderHistory />} />
+        <Route path="/SignIn" element={<SignIn />} />
         <Route path="/Signout" element={<SignOut />} />
+        <Route path="/SignUp" element={<SignUp />} />
+        <Route path="/Checkout" element={<Checkout />} />
       </Routes>
       <Footer />
     </div>
