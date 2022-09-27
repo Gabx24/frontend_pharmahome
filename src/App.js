@@ -32,6 +32,7 @@ function App(props) {
     const fetchData = async () => {
       const result = await axios.get(backend);
       setProducts(result.data);
+      console.log(result.data);
     };
     fetchData();
   }, []);
