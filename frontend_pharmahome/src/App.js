@@ -11,6 +11,10 @@ import Profile from "./Components/Profile";
 import OrderHistory from "./Components/OrderHistory";
 import SignOut from "./Components/SignOut";
 import NavBarmenu from "./Components/Menu/NavBarmenu";
+
+import Navbar from "./Components/Menu/Navbar";
+import NavbarTest from "./Components/Menu/NavbarTest"
+
 import { Navigate } from "react-router-dom";
 import ProductPage from "./Components/ProductPage";
 import SignIn from "./Components/SignIn";
@@ -18,11 +22,13 @@ import SignUp from "./Components/SignUp";
 import Checkout from "./Components/Checkout";
 import About from "./Components/About";
 
+
 function App() {
   return (
-    <div>
+    <>
       {/* Add Menu Component */}
-      <NavBarmenu />
+      {/* <NavBarmenu /> */}
+      <NavbarTest />
       <Routes>
         <Route path="/Home" element={<Home />} />
         <Route path="/" element={<Navigate replace to="/Home" />} />
@@ -38,7 +44,7 @@ function App() {
         <Route path="/About" element={<About />} />
       </Routes>
       <Footer />
-    </div>
+    </>
   );
 }
 
