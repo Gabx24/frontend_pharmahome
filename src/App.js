@@ -26,7 +26,7 @@ import Container from "react-bootstrap/Container";
 function App(props) {
   const [products, setProducts] = useState([]);
 
-  const backend = process.env.BACKEND_URL || "http://localhost:8000/";
+  const backend = process.env.REACT_APP_BACKEND_URL || "http://localhost:8000/";
 
   useEffect(() => {
     const fetchData = async () => {
