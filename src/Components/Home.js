@@ -9,7 +9,9 @@ const Home = ({ products }) => {
       <h1 className="title-text-home">Selected for you:</h1>
       <div className="products">
         {products.map((product) => (
-          <FeatureProduct product={product} />
+          <React.Fragment key={product.id}>
+            <FeatureProduct product={product} />
+          </React.Fragment>
         ))}
       </div>
     </main>

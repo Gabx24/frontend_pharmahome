@@ -8,9 +8,9 @@ import Dashboard from "./Components/Dashboard";
 import Profile from "./Components/Profile";
 import OrderHistory from "./Components/OrderHistory";
 import SignOut from "./Components/SignOut";
-import NavBarmenu from "./Components/Menu/NavBarmenu";
+//import NavBarmenu from "./Components/Menu/NavBarmenu";
 
-import Navbar from "./Components/Menu/Navbar";
+//import Navbar from "./Components/Menu/Navbar";
 import NavbarTest from "./Components/Menu/NavbarTest";
 
 import { Navigate } from "react-router-dom";
@@ -35,7 +35,7 @@ function App(props) {
       console.log(result.data);
     };
     fetchData();
-  }, []);
+  }, [backend]);
 
   // useEffect(() => {
   //   console.log(products);

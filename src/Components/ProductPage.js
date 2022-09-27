@@ -14,7 +14,7 @@ export default function ProductPage({ url, products }) {
   const [product, setProduct] = useState();
 
   useEffect(() => {
-    const findProduct = products.find((element) => element.id == id);
+    const findProduct = products.find((element) => element.id === +id);
     setProduct(findProduct);
   }, []);
 
@@ -34,10 +34,9 @@ export default function ProductPage({ url, products }) {
             {" "}
             <img
               className="img-large"
-              img
               src={product.image}
               alt={product.ProductName}
-            ></img>
+            />
           </Col>
           <Col md={3}>
             <ListGroup variant="flush">
