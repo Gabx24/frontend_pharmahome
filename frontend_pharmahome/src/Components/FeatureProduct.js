@@ -1,25 +1,28 @@
 import { Link } from "react-router-dom";
+import Card from "react-bootstrap/Card";
+import Button from "react-bootstrap/Button";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 
 export default function FeatureProduct({ product }) {
   return (
-    <div className="product" key={product.id}>
-      <Link to={`/product/${product.id}`}>
-        <img
-          className="productImg"
-          src={product.image}
-          alt={product.ProductName}
-        />
-      </Link>
-      <div className="product-info">
+    <Col sm={6} md={4} lg={3} className="mb-3">
+      <Card className="product" key={product.id}>
         <Link to={`/product/${product.id}`}>
-          <p>{product.name}</p>
+          <img
+            className="card-img-top"
+            src={product.image}
+            alt={product.ProductName}
+          />
         </Link>
-        <p>
-          <p>{product.ProductName}</p>
-          <strong>€{product.price}</strong>
-        </p>
-        <button className="">Add to cart</button>
-      </div>
-    </div>
+        <Card.Body>
+          <Link to={`/product/${product.id}`}>
+            <Card.Title>{product.name}</Card.Title>
+          </Link>
+          <Card.Text>€{product.price}</Card.Text>
+          <Button>Add to cart</Button>
+        </Card.Body>
+      </Card>
+    </Col>
   );
 }
