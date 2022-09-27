@@ -11,12 +11,15 @@ import Profile from "./Components/Profile";
 import OrderHistory from "./Components/OrderHistory";
 import SignOut from "./Components/SignOut";
 import NavBarmenu from "./Components/Menu/NavBarmenu";
+import Navbar from "./Components/Menu/Navbar";
+import NavbarTest from "./Components/Menu/NavbarTest"
 
 function App() {
   return (
-    <div>
+    <>
       {/* Add Menu Component */}
-      <NavBarmenu />
+      {/* <NavBarmenu /> */}
+      <NavbarTest />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/Cart" element={<Cart />} />
@@ -26,7 +29,7 @@ function App() {
         <Route path="/Signout" element={<SignOut />} />
       </Routes>
       <Footer />
-    </div>
+    </>
   );
 }
 
