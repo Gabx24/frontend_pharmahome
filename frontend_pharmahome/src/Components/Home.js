@@ -6,7 +6,7 @@ const Home = ({ products }) => {
   return (
     <main>
       <ControlledCarousel />
-      <h1>Featured Products</h1>
+      <h1 className="title-text-home">Selected for you:</h1>
       <div className="products">
         {products.map((product) => (
           <FeatureProduct product={product} />

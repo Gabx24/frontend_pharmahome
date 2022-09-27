@@ -18,11 +18,12 @@ export default function FeatureProduct({ product }) {
         </Link>
         <Card.Body>
           <Link to={`/product/${product.id}`}>
-            <Card.Title>{product.name}</Card.Title>
+            <Card.Title>{product.ProductName}</Card.Title>
           </Link>
+
           <Rating rating={product.rating} numReviews={product.numReviews} />
-          <Card.Text>
-            <strong> €{product.price}</strong>
+          <Card.Text className="price-products">
+            <strong>€{product.price}</strong>
           </Card.Text>
           <Button>Add to cart</Button>
         </Card.Body>
