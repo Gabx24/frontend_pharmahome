@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
-import Row from "react-bootstrap/Row";
+//import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import Rating from "./Rating";
 
 export default function FeatureProduct({ product }) {
   return (
@@ -19,7 +20,10 @@ export default function FeatureProduct({ product }) {
           <Link to={`/product/${product.id}`}>
             <Card.Title>{product.name}</Card.Title>
           </Link>
-          <Card.Text>€{product.price}</Card.Text>
+          <Rating rating={product.rating} numReviews={product.numReviews} />
+          <Card.Text>
+            <strong> €{product.price}</strong>
+          </Card.Text>
           <Button>Add to cart</Button>
         </Card.Body>
       </Card>
