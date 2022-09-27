@@ -11,7 +11,7 @@ import SignOut from "./Components/SignOut";
 import NavBarmenu from "./Components/Menu/NavBarmenu";
 
 import Navbar from "./Components/Menu/Navbar";
-import NavbarTest from "./Components/Menu/NavbarTest"
+import NavbarTest from "./Components/Menu/NavbarTest";
 
 import { Navigate } from "react-router-dom";
 import ProductPage from "./Components/ProductPage";
@@ -40,12 +40,11 @@ function App(props) {
   //   console.log(products);
   // }, [products]);
 
-
   return (
     products.length && (
       <div>
         {/* Add Menu Component */}
-        <NavBarmenu />
+        <NavbarTest />
         <main>
           <Container className="mt-3rem">
             {/* {console.log(products)} */}
@@ -71,7 +70,6 @@ function App(props) {
         <Footer />
       </div>
     )
-
   );
 }
 
