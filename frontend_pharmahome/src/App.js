@@ -9,6 +9,10 @@ import Profile from "./Components/Profile";
 import OrderHistory from "./Components/OrderHistory";
 import SignOut from "./Components/SignOut";
 import NavBarmenu from "./Components/Menu/NavBarmenu";
+
+import Navbar from "./Components/Menu/Navbar";
+import NavbarTest from "./Components/Menu/NavbarTest"
+
 import { Navigate } from "react-router-dom";
 import ProductPage from "./Components/ProductPage";
 import SignIn from "./Components/SignIn";
@@ -35,6 +39,7 @@ function App(props) {
   // useEffect(() => {
   //   console.log(products);
   // }, [products]);
+
 
   return (
     products.length && (
@@ -66,6 +71,7 @@ function App(props) {
         <Footer />
       </div>
     )
+
   );
 }
 
