@@ -84,6 +84,10 @@ main {
   color: #7c8e93;
   font-family: "Montserrat";
 }
-.changetext{
-color:#3DC1B2 !important;
+.changetext {
+  color: #3dc1b2 !important;
+}
+
+.container-sm {
+  max-width: 600px;
 }
