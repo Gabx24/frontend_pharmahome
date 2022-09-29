@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 //import axios from "axios";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
@@ -8,7 +8,7 @@ import ListGroup from "react-bootstrap/ListGroup";
 import Badge from "react-bootstrap/Badge";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
-
+import {Store} from '../context/StoreContext';
 export default function ProductPage({ url, products }) {
   const { id } = useParams();
   const [product, setProduct] = useState();
@@ -25,6 +25,14 @@ export default function ProductPage({ url, products }) {
   //   });
   // }, []);
 
+  const {state, dispatch: ctxDispatch} = useContext(Store);
+  const addToCartHandler = () =>{
+    ctxDispatch({
+      type:'CART_ADD_ITEM',
+    payload:{...product, quantity: 1},
+  });
+
+  };
   return (
     product && (
       <div>
@@ -86,7 +94,7 @@ export default function ProductPage({ url, products }) {
                   {product.countInStock > 0 && (
                     <ListGroup.Item>
                       <div className="d-grid">
-                        <Button variant="primary">Add to Cart</Button>
+                        <Button onClick={addToCartHandler} variant="primary">Add to Cart</Button>
                       </div>
                     </ListGroup.Item>
                   )}

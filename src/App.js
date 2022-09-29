@@ -22,12 +22,17 @@ import About from "./Components/About";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import Container from "react-bootstrap/Container";
+
 import ResetPassword from "./Components/ResetPassword";
 
-function App(props) {
-  const [products, setProducts] = useState([]);
+import StoreProvider from './context/StoreContext';
+import {useContext} from 'react';
+
+function App() {
+  const [products, setProducts] = useState();
 
   const backend = process.env.REACT_APP_BACKEND_URL || "http://localhost:8000/";
+  console.log(process.env.REACT_APP_BACKEND_URL)
 
   useEffect(() => {
     const fetchData = async () => {
@@ -43,8 +48,8 @@ function App(props) {
   // }, [products]);
 
   return (
-    products.length && (
-      <div>
+    
+      <StoreProvider>
         {/* Add Menu Component */}
         <NavbarTest />
         <main>
@@ -71,8 +76,8 @@ function App(props) {
           </Container>
         </main>
         <Footer />
-      </div>
-    )
+      </StoreProvider>
+    
   );
 }
 
