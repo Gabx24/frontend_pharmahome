@@ -1,9 +1,5 @@
-
-import { Container, Row } from "react-bootstrap";
-
 import { useContext } from "react";
-import { Container, Row, Col } from "react-bootstrap";
-
+import { Container, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import HamburgerMenu from "./HamburgerMenu";
 import Nav from "react-bootstrap/Nav";
@@ -15,9 +11,10 @@ import Form from "react-bootstrap/Form";
 import Cart from "../Cart";
 import { Store } from "../../context/StoreContext";
 
-
 export default function NavbarTest() {
-  const {state:{cart}} = useContext(Store)
+  const {
+    state: { cart },
+  } = useContext(Store);
   return (
     <Navbar className="NavBar" expand="lg">
       <Container>
@@ -46,9 +43,9 @@ export default function NavbarTest() {
               </Nav.Link>
 
               <Nav.Link className="Cart" as={Link} to="/Cart">
-              <Badge pill bg="danger">
-                Cart: {cart.cartItems.length}
-              </Badge>
+                <Badge pill bg="danger">
+                  Cart: {cart.cartItems.length}
+                </Badge>
               </Nav.Link>
               <NavDropdown id="user-dropdown" title="User" menuVariant="dark">
                 <NavDropdown.Item
