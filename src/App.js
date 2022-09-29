@@ -22,6 +22,9 @@ import About from "./Components/About";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import Container from "react-bootstrap/Container";
+
+import ResetPassword from "./Components/ResetPassword";
+
 import StoreProvider from './context/StoreContext';
 import {useContext} from 'react';
 
@@ -68,6 +71,7 @@ function App() {
               <Route path="/SignUp" element={<SignUp />} />
               <Route path="/Checkout" element={<Checkout />} />
               <Route path="/About" element={<About />} />
+              <Route path="/ResetPassword" element={<ResetPassword />} />
             </Routes>
           </Container>
         </main>

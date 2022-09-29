@@ -1,10 +1,10 @@
 .hidden {
-    display: none;
+  display: none;
 }
 
 ul {
-    list-style-type: none;
-    cursor: pointer;
+  list-style-type: none;
+  cursor: pointer;
 }
 
 /* .active {
@@ -12,48 +12,39 @@ ul {
 } */
 
 .userDropdown {
-    position: relative;
+  position: relative;
 }
 
 .searchBar {
-    position:left;
-    float:right;
-    margin: left;
+  position: left;
+  float: right;
+  margin: left;
 }
-.NavBar{
-    background-color: #355764;
-   
+.NavBar {
+  background-color: #355764;
 }
 
-.btn-outline-success{
-    color:#3DC1B2 !important;
-    border-color:#3DC1B2 !important ;
+.btn-outline-success {
+  color: #3dc1b2 !important;
+  border-color: #3dc1b2 !important ;
 }
 
 .Home {
-    color:#3DC1B2 !important;
+  color: #3dc1b2 !important;
 }
 
-.Cart{
-    color:#3DC1B2 !important;
+.Cart {
+  color: #3dc1b2 !important;
 }
 
-#user-dropdown{
-    color:#3DC1B2 !important;
+#user-dropdown {
+  color: #3dc1b2 !important;
 }
 
 .dropdown-menu-dark .dropdown-item {
-    color: #355764 !important;
-
+  color: #355764 !important;
 }
 
-.dropdown-menu-dark{
-background-color:#D6EFED !important;    
+.dropdown-menu-dark {
+  background-color: #d6efed !important;
 }
-
-
-
-
-
-
-
