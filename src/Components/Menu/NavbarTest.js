@@ -1,4 +1,4 @@
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import HamburgerMenu from "./HamburgerMenu";
 import Nav from "react-bootstrap/Nav";
@@ -12,8 +12,8 @@ export default function NavbarTest() {
     <Navbar className="NavBar" expand="lg">
       <Container>
         <HamburgerMenu />
-        <Navbar.Brand href="#home">
-          <img src="/logo.png" height="40px" alt="" />
+        <Navbar.Brand href="/">
+          <img src="/logo.png" height="30px" alt="" />
           <p className="changetext">PharmaHome</p>
         </Navbar.Brand>
         <Form className="d-flex">
@@ -49,13 +49,16 @@ export default function NavbarTest() {
                 <NavDropdown.Item className="Profile" as={Link} to="/Profile">
                   Profile
                 </NavDropdown.Item>
-                <NavDropdown.Item className="Order History" href="#action/3.2">
+                <NavDropdown.Item
+                  className="Order History"
+                  href="/OrderHistory"
+                >
                   Order History
                 </NavDropdown.Item>
-                <NavDropdown.Item className="SignIn" href="#action/3.3">
+                <NavDropdown.Item className="SignIn" href="/SignIn">
                   Sign In
                 </NavDropdown.Item>
-                <NavDropdown.Item className="SignOut" href="#action/3.4">
+                <NavDropdown.Item className="SignOut" href="/SignOut">
                   Sign Out
                 </NavDropdown.Item>
 

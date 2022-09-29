@@ -91,3 +91,8 @@ main {
 .container-sm {
   max-width: 600px;
 }
+.resetBtn {
+  background-color: #ffc090;
+  border-radius: 25px;
+  border: none;
+}
