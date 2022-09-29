@@ -22,6 +22,8 @@ import About from "./Components/About";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import Container from "react-bootstrap/Container";
+import StoreProvider from './context/StoreContext';
+import {useContext} from 'react';
 
 function App() {
   const [products, setProducts] = useState();
@@ -44,7 +46,7 @@ function App() {
 
   return (
     
-      <div>
+      <StoreProvider>
         {/* Add Menu Component */}
         <NavbarTest />
         <main>
@@ -70,7 +72,7 @@ function App() {
           </Container>
         </main>
         <Footer />
-      </div>
+      </StoreProvider>
     
   );
 }
