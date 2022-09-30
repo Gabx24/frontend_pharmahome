@@ -1,6 +1,6 @@
 import React from "react";
 
 export const Checkout = () => {
-  return <div>Checkout</div>;
+  return <p>Checkout</p>;
 };
 export default Checkout;

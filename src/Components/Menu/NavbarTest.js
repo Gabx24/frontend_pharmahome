@@ -43,9 +43,11 @@ export default function NavbarTest() {
               </Nav.Link>
 
               <Nav.Link className="Cart" as={Link} to="/Cart">
-                <Badge pill bg="danger">
-                  Cart: {cart.cartItems.length}
-                </Badge>
+                Cart
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                  {cart.cartItems.length}
+                  <span class="visually-hidden">unread messages</span>
+                </span>
               </Nav.Link>
               <NavDropdown id="user-dropdown" title="User" menuVariant="dark">
                 <NavDropdown.Item
