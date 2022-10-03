@@ -22,7 +22,7 @@ export default function SignIn() {
   };
 
   return (
-    <Container className="container-sm">
+    <Container className="small-container">
       <Helmet>
         <title>Sign In</title>
       </Helmet>

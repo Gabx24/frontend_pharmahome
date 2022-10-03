@@ -113,3 +113,6 @@ h1 {
   font-family: "Montserrat";
   font-size: 36px;
 }
+.small-container {
+  max-width: 600px;
+}
