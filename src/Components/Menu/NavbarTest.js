@@ -4,34 +4,30 @@ import { Link } from "react-router-dom";
 import HamburgerMenu from "./HamburgerMenu";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import Badge from "react-bootstrap/Navbar";
+//import Badge from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
-import Cart from "../Cart";
+//import Cart from "../Cart";
 import { Store } from "../../context/StoreContext";
+import { useAuthContext } from "../../context/AuthContext";
 
 export default function NavbarTest() {
   const {
     state: { cart },
   } = useContext(Store);
+
+  const { user, authToken } = useAuthContext();
+  console.log("user from navbar", user);
   return (
-    <Navbar className="NavBar" expand="lg">
+    <Navbar className="NavBar" expand="sm">
       <Container>
         <HamburgerMenu />
         <Navbar.Brand href="/">
-          <img src="/logo.png" height="30px" alt="" />
+          <img src="/logo.png" height="25px" alt="" />
           <p className="changetext">PharmaHome</p>
         </Navbar.Brand>
-        <Form className="d-flex">
-          <Form.Control
-            type="search"
-            placeholder="Search"
-            className="me-2"
-            aria-label="Search"
-          />
-          <Button variant="outline-success">Search</Button>
-        </Form>
+
         <Row className="col-">
           <Navbar.Collapse
             id="navbar-dark-example"
@@ -43,36 +39,36 @@ export default function NavbarTest() {
               </Nav.Link>
 
               <Nav.Link className="Cart" as={Link} to="/Cart">
-                <Badge pill bg="danger">
-                  Cart: {cart.cartItems.length}
-                </Badge>
+                Cart
+                <span className="position-absolute translate-middle badge rounded-pill bg-danger">
+                  {cart.cartItems.length}
+                  <span className="visually-hidden">unread messages</span>
+                </span>
               </Nav.Link>
-              <NavDropdown id="user-dropdown" title="User" menuVariant="dark">
-                <NavDropdown.Item
-                  className="DashBoard"
-                  as={Link}
-                  to="/Dashboard"
-                >
-                  Dashboard
-                </NavDropdown.Item>
-                <NavDropdown.Item className="Profile" as={Link} to="/Profile">
-                  Profile
-                </NavDropdown.Item>
-                <NavDropdown.Item
-                  className="Order History"
-                  href="/OrderHistory"
-                >
-                  Order History
-                </NavDropdown.Item>
-                <NavDropdown.Item className="SignIn" href="/SignIn">
-                  Sign In
-                </NavDropdown.Item>
-                <NavDropdown.Item className="SignOut" href="/SignOut">
-                  Sign Out
-                </NavDropdown.Item>
+              {!authToken && !user ? (
+                <>
+                  <Nav.Link className="Home" as={Link} to="/SignUp">
+                    Sign Up
+                  </Nav.Link>
+                  <Nav.Link className="Home" as={Link} to="/SignIn">
+                    Sign In
+                  </Nav.Link>
+                </>
+              ) : (
+                <NavDropdown id="user-dropdown" title="User" menuVariant="dark">
+                  <NavDropdown.Item className="Profile" as={Link} to="/Profile">
+                    Profile
+                  </NavDropdown.Item>
+                  <NavDropdown.Item className="SignIn" href="/SignIn">
+                    Sign In
+                  </NavDropdown.Item>
+                  <NavDropdown.Item className="SignOut" href="/SignOut">
+                    Sign Out
+                  </NavDropdown.Item>
 
-                {/* <NavDropdown.Divider /> */}
-              </NavDropdown>
+                  {/* <NavDropdown.Divider /> */}
+                </NavDropdown>
+              )}
             </Nav>
           </Navbar.Collapse>
         </Row>

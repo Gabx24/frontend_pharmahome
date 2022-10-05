@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import Card from "react-bootstrap/Card";
-import Button from "react-bootstrap/Button";
+//import Button from "react-bootstrap/Button";
 //import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Rating from "./Rating";
@@ -25,7 +25,7 @@ export default function FeatureProduct({ product }) {
           <Card.Text className="price-products">
             <strong>€{product.price}</strong>
           </Card.Text>
-          <Button>Add to cart</Button>
+          <Card.Text className="cut-text">{product.description}</Card.Text>
         </Card.Body>
       </Card>
     </Col>
