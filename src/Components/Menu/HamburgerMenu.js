@@ -1,11 +1,12 @@
 import { slide as Menu } from "react-burger-menu";
 import "./menu.css";
-import { NavLink, redirect } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 
 export default function HamburgerMenu() {
   const [clicked1, setClicked1] = useState(false);
   const [clicked2, setClicked2] = useState(false);
+  const navigate = useNavigate();
 
   const styles = {
     bmBurgerButton: {
@@ -64,7 +65,7 @@ export default function HamburgerMenu() {
       <Menu styles={styles}>
         <ul>
           {" "}
-          <span onClick={() => setClicked1(!clicked1)}>Medicines </span>
+          <span onClick={() => navigate("/category/2")}>Medicines </span>
           {/* <li className={clicked1 ? "" : "hidden"}><NavLink to="/" style={({ isActive }) =>
             isActive && activeStyle}>Item1</NavLink></li>
           <li className={clicked1 ? "" : "hidden"}><NavLink to="/" style={({ isActive }) =>
@@ -75,7 +76,7 @@ export default function HamburgerMenu() {
 
         <ul>
           {" "}
-          <span onClick={() => setClicked2(!clicked2)}>Cosmetics</span>
+          <span onClick={() => navigate("/category/1")}>Cosmetics</span>
           {/* <li className={clicked2 ? "" : "hidden"}><NavLink to="/" >Item1</NavLink></li>
           <li className={clicked2 ? "" : "hidden"}><NavLink to="/" >Item1</NavLink></li>
           <li className={clicked2 ? "" : "hidden"}><NavLink to="/" >Item1</NavLink></li>
@@ -83,23 +84,19 @@ export default function HamburgerMenu() {
         </ul>
         <ul>
           {" "}
-          <span onClick={() => setClicked2(!clicked2)}>
+          <span onClick={() => navigate("/category/3")}>
             Vitamin, Sport & Nutrition
           </span>
         </ul>
         <ul>
           {" "}
-          <span onClick={() => setClicked2(!clicked2)}>
-            Pregnancy & Meternity
+          <span onClick={() => navigate("/category/4")}>
+            Pregnancy & Maternity
           </span>
         </ul>
         <ul>
           {" "}
-          <span onClick={() => setClicked2(!clicked2)}>Baby & Child</span>
-        </ul>
-        <ul>
-          {" "}
-          <span onClick={() => setClicked2(!clicked2)}>Over the Counter</span>
+          <span onClick={() => navigate("/category/5")}>Over the Counter</span>
         </ul>
       </Menu>
     </>
