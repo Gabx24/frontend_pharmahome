@@ -25,7 +25,7 @@ export default function FeatureProduct({ product }) {
           <Card.Text className="price-products">
             <strong>€{product.price}</strong>
           </Card.Text>
-          <Card.Text>{product.description}</Card.Text>
+          <Card.Text className="cut-text">{product.description}</Card.Text>
         </Card.Body>
       </Card>
     </Col>

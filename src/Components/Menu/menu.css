@@ -48,3 +48,10 @@ ul {
 .dropdown-menu-dark {
   background-color: #d6efed !important;
 }
+.dropdown-item {
+  color: #3dc1b2 !important;
+}
+.navbar-brand {
+  color: #3dc1b2;
+  font-family: "Montserrat";
+}

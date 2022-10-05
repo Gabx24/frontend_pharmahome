@@ -36,7 +36,6 @@ export default function ProductPage({ url, products }) {
     product && (
       <div>
         <Row>
-          {console.log(product)}
           <Col md={6}>
             {" "}
             <img
