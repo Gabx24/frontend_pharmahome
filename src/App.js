@@ -3,6 +3,7 @@ import Footer from "./Components/Footer";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Routes, Route } from "react-router-dom";
 import Home from "./Components/Home";
+import DisplayCategory from "./Components/DisplayCategory";
 import Cart from "./Components/Cart";
 
 import Profile from "./Components/Profile";
@@ -59,6 +60,10 @@ function App() {
             <Route
               path="/product/:id"
               element={<ProductPage url={backend} products={products} />}
+            />
+            <Route
+              path="/category/:id"
+              element={<DisplayCategory products={products} />}
             />
 
             <Route path="/Profile" element={<Profile />} />
