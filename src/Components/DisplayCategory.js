@@ -9,10 +9,13 @@ const DisplayCategory = ({ products }) => {
     (product) => id == product.CategoryID
   );
 
+  console.log('filtered products',filteredProducts)
+  console.log('PRODUCTS', products)
+
   return (
     <main>
       <h1 className="title-text-home">
-        Displaying all under category: {console.log(filteredProducts)}
+        Displaying all under category:
       </h1>
       <div className="products">
         {filteredProducts?.map((product) => (

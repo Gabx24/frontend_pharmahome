@@ -32,11 +32,11 @@ import StoreProvider from "./context/StoreContext";
 function App() {
   const [products, setProducts] = useState();
 
-  const backend = process.env.REACT_APP_BACKEND_URL || "http://localhost:8000/";
+  const backend = process.env.REACT_APP_BACKEND_URL || "http://localhost:8000";
 
   useEffect(() => {
     const fetchData = async () => {
-      const result = await axios.get(`${backend}/products`);
+      const result = await axios.get(`${backend}products`);
       setProducts(result.data);
     };
     fetchData();
